@@ -809,7 +809,8 @@ Plotly.newPlot('plot', data, layout)
 <h1>w9</h1>
 <h2>41023203</h2>
 <p>心得:</p>
-<p>在git pull、acp上有很多問題，跟組員一起解決及上網找問題的解決方法</p><h2>41023204</h2>
+<p>在git pull、acp上有很多問題，跟組員一起解決及上網找問題的解決方法</p>
+<h2>41023204</h2>
 <p>心得：</p>
 <p>剛開始遇到「fatal：detected dubious ownership in repository at '' is on a file system that doesnot record ownership</p>
 <p>To add an exception for this director, call：」的時候很慌張，後來發現cd到資料夾後再貼上他給的call，就能解決問題。</p>
@@ -820,8 +821,35 @@ Plotly.newPlot('plot', data, layout)
 <p></p>
 <p></p>
 <h1>w10</h1>
-<h2>第一題</h2>
-<p><span style="vertical-align: inherit;"><span style="vertical-align: inherit;">ZeroMQ 遠程 API 是</span></span><span style="vertical-align: inherit;"><span style="vertical-align: inherit;">應用程序可以與 CoppeliaSim 連接的幾種方式</span></span><span style="vertical-align: inherit;"><span style="vertical-align: inherit;">之一。</span></span></p>
-<p><span style="vertical-align: inherit;"><span style="vertical-align: inherit;">ZeroMQ 遠程 API 允許從外部應用程序或遠程硬件（例如真實機器人、遠程計算機等）控制模擬（或模擬器本身）。</span><span style="vertical-align: inherit;">它提供所有 API 函數，也可通過 CoppeliaSim 腳本使用：這包括所有</span></span><span style="vertical-align: inherit;"><span style="vertical-align: inherit;">常規 API 函數</span></span><span style="vertical-align: inherit;"><span style="vertical-align: inherit;">（即 sim.* 類型的函數），以及</span></span><span style="vertical-align: inherit;"><span style="vertical-align: inherit;">插件</span></span><span style="vertical-align: inherit;"><span style="vertical-align: inherit;">提供的所有 API 函數（例如 simOMPL.*、simUI.*、simIK.*、等），如果啟用。</span></span></p>
-<p><span style="vertical-align: inherit;"><span style="vertical-align: inherit;">ZeroMQ 遠程 API 函數通過</span></span><span style="vertical-align: inherit;"><span style="vertical-align: inherit;">ZeroMQ</span></span><span style="vertical-align: inherit;"><span style="vertical-align: inherit;">及其到 CoppeliaSim 的</span></span><span style="vertical-align: inherit;"><span style="vertical-align: inherit;">接口插件</span></span><span style="vertical-align: inherit;"><span style="vertical-align: inherit;">和 ZMQ 遠程 API</span></span><span style="vertical-align: inherit;"><span style="vertical-align: inherit;">附加組件</span></span><span style="vertical-align: inherit;"><span style="vertical-align: inherit;">與 CoppeliaSim 進行交互。</span><span style="vertical-align: inherit;">所有這一切都以一種隱藏的方式發生在用戶身上。</span><span style="vertical-align: inherit;">遠程API可以讓一個或多個外部應用程序以步進</span></span><span style="vertical-align: inherit;"><span style="vertical-align: inherit;">（</span></span><span style="vertical-align: inherit;"><span style="vertical-align: inherit;">即與每個仿真步驟</span></span><em><span style="vertical-align: inherit;"><span style="vertical-align: inherit;">同步</span></span></em><span style="vertical-align: inherit;"><span style="vertical-align: inherit;">）或非步進（即正常運行模式）的方式與CoppeliaSim進行交互，甚至支持遠程控制模擬器（例如遠程加載場景，例如開始、暫停或停止模擬）。</span></span></p>
+<p><!-- add 1 to 100 part2 結束--></p>
+<!-- editor2 開始 -->
+<p><!-- 用來顯示程式碼的 editor 區域 --></p>
+<div id="kw_editor2" style="width: 600px; height: 300px;"></div>
+<p><!-- 以下的表單與按鈕與前面的 Javascript doSave 函式以及 FileSaver.min.js 互相配合 --></p>
+<p><!-- 存擋表單開始 --></p>
+<form><label>Filename: <input id="kw_filename2" placeholder="input file name" type="text"/>.py</label> <input onclick="doSave('kw_py_src2', 'kw_filename2');" type="submit" value="Save"/></form>
+<p><!-- 存擋表單結束 --></p>
 <p></p>
+<p><!-- 執行與清除按鈕開始 --></p>
+<p><button id="kw_run2">Run</button> <button id="kw_show_console2">Output</button> <button id="kw_clear_console2">清除輸出區</button><button id="clear_bd2">清除繪圖區</button><button onclick="window.location.reload()">Reload</button></p>
+<p><!-- 執行與清除按鈕結束 --></p>
+<p></p>
+<p><!-- 程式執行 ouput 區 --></p>
+<div style="width: 100%; height: 100%;"><textarea autocomplete="off" id="kw_console2"></textarea></div>
+<p><!-- Brython 程式執行的結果, 都以 brython_div1 作為切入位置 --></p>
+<div id="brython_div2"></div>
+<!-- editor2 結束 --><hr/>
+<p>
+<script src="https://unpkg.com/three@0.144.0/build/three.js" type="text/javascript"></script>
+</p>
+<p></p>
+<p>分工:</p>
+<p>3號:pull requests、第一題</p>
+<p>4號:解決git pull</p>
+<p>5號:共同討論</p>
+<p>6號:解決pull requests</p>
+<p>第一題</p>
+<p style="text-align: left;"><span style="vertical-align: inherit;"><span style="vertical-align: inherit;">ZeroMQ 遠程 API 是</span></span><span style="vertical-align: inherit;"><span style="vertical-align: inherit;">應用程序可以與 CoppeliaSim 連接的幾種方式</span></span><span style="vertical-align: inherit;"><span style="vertical-align: inherit;">之一。</span></span></p>
+<p style="text-align: left;"><span style="vertical-align: inherit;"><span style="vertical-align: inherit;">ZeroMQ 遠程 API 允許從外部應用程序或遠程硬件（例如真實機器人、遠程計算機等）控制模擬（或模擬器本身）。</span><span style="vertical-align: inherit;">它提供所有 API 函數，也可通過 CoppeliaSim 腳本使用：這包括所有</span></span><span style="vertical-align: inherit;"><span style="vertical-align: inherit;">常規 API 函數</span></span><span style="vertical-align: inherit;"><span style="vertical-align: inherit;">（即 sim.* 類型的函數），以及</span></span><span style="vertical-align: inherit;"><span style="vertical-align: inherit;">插件</span></span><span style="vertical-align: inherit;"><span style="vertical-align: inherit;">提供的所有 API 函數（例如 simOMPL.*、simUI.*、simIK.*、等），如果啟用。</span></span></p>
+<p style="text-align: left;"><span style="vertical-align: inherit;"><span style="vertical-align: inherit;">ZeroMQ 遠程 API 函數通過</span></span><span style="vertical-align: inherit;"><span style="vertical-align: inherit;">ZeroMQ</span></span><span style="vertical-align: inherit;"><span style="vertical-align: inherit;">及其到 CoppeliaSim 的</span></span><span style="vertical-align: inherit;"><span style="vertical-align: inherit;">接口插件</span></span><span style="vertical-align: inherit;"><span style="vertical-align: inherit;">和 ZMQ 遠程 API</span></span><span style="vertical-align: inherit;"><span style="vertical-align: inherit;">附加組件</span></span><span style="vertical-align: inherit;"><span style="vertical-align: inherit;">與 CoppeliaSim 進行交互。</span><span style="vertical-align: inherit;">所有這一切都以一種隱藏的方式發生在用戶身上。</span><span style="vertical-align: inherit;">遠程API可以讓一個或多個外部應用程序以步進</span></span><span style="vertical-align: inherit;"><span style="vertical-align: inherit;">（</span></span><span style="vertical-align: inherit;"><span style="vertical-align: inherit;">即與每個仿真步驟</span></span><em><span style="vertical-align: inherit;"><span style="vertical-align: inherit;">同步</span></span></em><span style="vertical-align: inherit;"><span style="vertical-align: inherit;">）或非步進（即正常運行模式）的方式與CoppeliaSim進行交互，甚至支持遠程控制模擬器（例如遠程加載場景，例如開始、暫停或停止模擬）。</span></span></p>
+<p>第二題</p>
