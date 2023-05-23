@@ -58,7 +58,7 @@ def run1():
     try:
         url = doc.query["src"]
     except:
-        url = "https://gist.githubusercontent.com/ziyi8/e25d90591c555dcf1d5361748b4c7e95/raw/7dc5a510a67daf1d47579e9cbceb3c619877f152/w10.py"
+        url = "https://gist.githubusercontent.com/tseYU000/f415177a05dbe27e5fa9d0eec4fc3447/raw/129d359b8e3325c3df29f57e4db193e6237c62e2/w13.txt"
     prog = open(url).read()
 
     # 將程式載入編輯區
@@ -93,7 +93,7 @@ def clear_bd1(ev):
 # 利用 ace 中的 Editor 建立 Ace2 物件, 其中的輸入變數分別對應到頁面中的編輯區物件
 Ace2 = ace.Editor(editor_id="kw_editor1", console_id="kw_console1", container_id="kw__container1", storage_id="kw_py_src1" )
 
-add1to100_url = "https://gist.githubusercontent.com/tseYU000/f415177a05dbe27e5fa9d0eec4fc3447/raw/1a04e319fa21eb64bf29e15f5a02630e10c8d254/w13.py"
+add1to100_url = "https://gist.githubusercontent.com/tseYU000/f415177a05dbe27e5fa9d0eec4fc3447/raw/129d359b8e3325c3df29f57e4db193e6237c62e2/w13.txt"
 
 # 從 gist 取得程式碼
 add_src = open(add1to100_url).read()
@@ -122,7 +122,6 @@ doc["add1to100"].bind('click', add)
 <p></p>
 <p><!-- 程式執行 ouput 區 --></p>
 <div style="width: 100%; height: 100%;"><textarea autocomplete="off" id="kw_console1"></textarea></div>
-<div style="width: 100%; height: 100%;"></div>
-<div style="width: 100%; height: 100%;"></div>
-<div style="width: 100%; height: 100%;"></div>
+<p><!-- Brython 程式執行的結果, 都以 brython_div1 作為切入位置 --></p>
+<div id="brython_div1"></div>
 <p></p>
