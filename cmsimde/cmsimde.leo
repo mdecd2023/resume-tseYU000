@@ -21,6 +21,7 @@
 <v t="leo.20220924163559.1"><vh>config/config 問題</vh></v>
 </v>
 <v t="leo.20221017090940.1"><vh>202210 修改</vh></v>
+<v t="leo.20230426202726.1"><vh>202304 註記</vh></v>
 </v>
 <v t="leo.20190515144242.1"><vh>@clean wsgi.py</vh>
 <v t="leo.20190515144254.1"><vh>Declarations (wsgi.py)</vh></v>
@@ -115,6 +116,9 @@
 <v t="leo.20220911145040.1"><vh>@edit main.py</vh></v>
 <v t="leo.20220911145111.1"><vh>@edit nocache.py</vh></v>
 <v t="leo.20220911145241.1"><vh>@edit .gitignore</vh></v>
+</v>
+<v t="leo.20230426201753.1"><vh>@path static</vh>
+<v t="leo.20230426201801.1"><vh>@edit axuploader.js</vh></v>
 </v>
 </vnodes>
 <tnodes>
@@ -718,7 +722,7 @@ def fileuploadform(edit):
 &lt;script src="/static/axuploader.js" type="text/javascript"&gt;&lt;/script&gt;
 &lt;script&gt;
 $(document).ready(function(){
-$('.prova').axuploader({url:'fileaxupload', allowExt:['jpg','png','gif','7z','pdf','zip','flv','stl','swf'],
+$('.prova').axuploader({url:'fileaxupload', allowExt:['jpg','png','gif','7z','pdf','zip','ttt','stl','txt','html','mp4'],
 finish:function(x,files)
     {
         alert('All files have been uploaded: '+files);
@@ -835,7 +839,8 @@ def generate_pages():
         return set_css() + "&lt;div class='container'&gt;&lt;nav&gt;" + \
                      directory + "&lt;/nav&gt;&lt;section&gt;&lt;h1&gt;Generate Pages&lt;/h1&gt;" + \
                      "已經將網站轉為靜態網頁!" + \
-                     "&lt;/section&gt;&lt;/div&gt;&lt;/body&gt;&lt;/html&gt;"</t>
+                     "&lt;/section&gt;&lt;/div&gt;&lt;/body&gt;&lt;/html&gt;"
+</t>
 <t tx="leo.20190515144237.24"># seperate page need heading and edit variables, if edit=1, system will enter edit mode
 # single page edit will use ssavePage to save content, it means seperate save page
 @app.route('/get_page')
@@ -1936,6 +1941,11 @@ def send_file(path):
 
 
 # setup static directory
+#@app.route('/images/&lt;path:path&gt;')
+#@app.route('/images/&lt;path:path&gt;')
+#@app.route('/images/&lt;path:path&gt;')
+#@app.route('/images/&lt;path:path&gt;')
+#@app.route('/images/&lt;path:path&gt;')
 #@app.route('/images/&lt;path:path&gt;')
 </t>
 <t tx="leo.20190515144238.15">@app.route('/images/&lt;path:path&gt;')
@@ -3460,7 +3470,8 @@ http_server.serve_forever()</t>
         return url
     else:
         url = url.replace("http://", "https://", 1)
-        return url</t>
+        return url
+</t>
 <t tx="leo.20221017090913.1">@app.route('/acpform')
 def acpform():
     
@@ -3479,7 +3490,8 @@ def acpform():
                  directory + "&lt;/nav&gt;&lt;section&gt;&lt;h1&gt;Acp From&lt;/h1&gt;&lt;form method='post' action='doAcp'&gt; \
                 Commit Messages:&lt;textarea name='commit' rows='1' cols='80'&gt;&lt;/textarea&gt; \
     &lt;input type='submit' value='acp'&gt;&lt;/form&gt; \
-    &lt;/section&gt;&lt;/div&gt;&lt;/body&gt;&lt;/html&gt;"</t>
+    &lt;/section&gt;&lt;/div&gt;&lt;/body&gt;&lt;/html&gt;"
+</t>
 <t tx="leo.20221017090933.1">@app.route('/doAcp', methods=['POST'])
 def doAcp():
 
@@ -3506,6 +3518,34 @@ def doAcp():
 
 </t>
 <t tx="leo.20221017090940.1">add acpForm and doAcp</t>
+<t tx="leo.20230426201753.1"></t>
+<t tx="leo.20230426202726.1">$(function() {
+	//dosomething
+});
+
+ 即為:
+ 
+ $(document).ready(function(){
+    //something
+});
+
+表示在 DOM tree 載入完成後再執行方法, 但是不會回傳 jQuery 物件.
+
+(function($){
+    //something
+})(jQuery);
+
+用在 jQuery plugin，實際上是執行了一個匿名的 function 並回傳 jQuery 物件，當 jQuery 載入完成後便會開始執行，但無法操作 DOM tree.
+
+jQuery AXuploader.js 是一個使用 jQuery 實現的檔案上傳 plugin。下面是該 plugin 的主要程式架構：
+
+    定義了一個 jQuery 的方法 axuploader()，用於初始化檔案上傳功能。
+    在方法內部，使用了一個自定義的選項對象來配置上傳功能的一些參數，例如上傳的目標 URL、上傳的方式、上傳的最大檔案大小等等。
+    當用戶選擇了要上傳的檔案後，使用 AJAX 技術向伺服器端發送一個 POST 請求，並將選中的檔案作為該請求的內容。
+    在發送請求的過程中，通過定義一系列的回調函數，對請求的不同階段進行處理，例如在開始上傳時顯示一個進度條，在上傳成功時顯示一個提示框等等。
+    最後，在插件的內部，使用了一個封裝了 AJAX 的函數，用於向伺服器端發送上傳請求，並處理伺服器端返回的數據。
+
+總體而言，jQuery AXuploader.js 的程式架構比較清晰，使用了常見的 jQuery 和 AJAX 技術，同時對上傳過程中的各個階段都做了良好的處理，使得整個上傳過程變得更加穩定和易用。</t>
 <t tx="yen.20200710111924.1">def checkMath():
 
     """Use LaTeX Equation rendering
